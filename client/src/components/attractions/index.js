@@ -15,7 +15,7 @@ const {Attractions} = useContext(AttractionsContext);
     <MapAndAttr_container>
             <Map_container>
                     <Map_div>
-                        <Map/>
+                        {/* <Map/> */}
                     </Map_div>
             </Map_container>
             <Attractions_container>
