@@ -62,12 +62,6 @@ export const HomeContainer= styled.div`
 
 `;
 
-// background: url(${img}) no-repeat center center fixed;
-// background-image: url(${img});
-// background-size: cover;
-// font-family: "Open Sans Hebrew", "arial", "Helvetica Neue", Helvetica, serif, sans-serif;
-
-
 
 export const LocationBttn = styled.button`
  background-color:#d14d68;
