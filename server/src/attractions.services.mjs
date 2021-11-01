@@ -27,7 +27,7 @@ async function Attraction_aggregate(lat, long) {
             }
         },
         { "$sort": {"distance": 1} },
-        // { '$match': {Attraction_Type: type} }
+      
        
     ])
 return attr;
@@ -69,19 +69,12 @@ return attr;
 }
 
 
-export async function getAttractions(lat, long, type) {
-    console.log("kill meeeee")
-    const attr= await Attraction.find();
-    console.log("attr", attr)
-
-       return attr;
+export function getAttractions(lat, long, type) {
     if(type === "all"){
 
-        
-        // return Attraction_aggregate(lat, long);
+        return Attraction_aggregate(lat, long);
     }else{
-        
-        // return Attr_filter_aggregate(lat, long, type);
+        return Attr_filter_aggregate(lat, long, type);
     }
 };
 
