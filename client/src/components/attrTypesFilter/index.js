@@ -28,7 +28,7 @@ const handleClick = (e) => {
 
 useEffect(() =>{
     if(value !== ""){
-    findAttr(location, value);
+    findAttr(location, value);  
     }
 },[value]);
 

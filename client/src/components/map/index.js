@@ -15,7 +15,7 @@ export default function Map() {
     const {Attractions} = useContext(AttractionsContext);
     const {coordinates} = location;
 
-    const Marker = ({ text, attr }) => {
+    const Marker = ({ text, attr }) => {  //config marker
       return(
          <div 
              onClick={() => { setSelectedAttr(attr) }} 
@@ -30,7 +30,7 @@ export default function Map() {
     
     const MarkerInfo = () =>{
       return(
-      <OnClick_Info className="markerrrrr">
+      <OnClick_Info>
           <div>
               <h2>{selectedAttr.Name}</h2>
               <p>{selectedAttr.ShortDescription}</p>
@@ -39,10 +39,6 @@ export default function Map() {
       )
     }
 
-
-    useEffect(()=>{
-console.log("selectedAttr",selectedAttr)
-    },[selectedAttr])
 
     const getMapOptions = () => {
       return {

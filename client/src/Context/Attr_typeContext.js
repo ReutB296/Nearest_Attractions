@@ -10,7 +10,7 @@ export const AttrTypeContext = React.createContext({
 export default function AttrTypeProvider({ children }) {
     const [Attr_Type, setAttr_Type] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => {  //get types on app load
             fetch(`/api/Attractions/types`)
             .then(response => response.json())
             .then(data => setAttr_Type(data));

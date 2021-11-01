@@ -10,6 +10,7 @@ export const FilterContainer= styled.div`
     justify-content: space-between;
     max-width: 100vw;
     align-items: center;
+    z-index: 99999;
 
         & a{
             display:flex;

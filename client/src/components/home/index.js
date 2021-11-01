@@ -23,8 +23,8 @@ export default function Home() {
   const {findAttr} = useContext(AttractionsContext);
 
   const findLocation = () =>{
-      if('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(success, error, options);
+      if('geolocation' in navigator) {  //if geolocation is enabeled 
+        navigator.geolocation.getCurrentPosition(success, error, options); //get the coordinates
       }else{
           error({
             code: 0,

@@ -39,7 +39,7 @@ const handleClick = () =>{
 }
 
 
-useEffect(() =>{
+useEffect(() =>{  //handle localStorage
     addOrRemoveFavorites(Name, Id, isColored);
 }, [isColored]);
    

@@ -11,7 +11,7 @@ export const AttractionsContext = React.createContext({
 export default function AttractionsProvider({ children }) {
     const [Attractions, setAttractions] = useState([]);
 
-    const findAttr = useCallback(({coordinates}, type="all") => {
+    const findAttr = useCallback(({coordinates}, type="all") => {  //fetch attractions from server with coordinates and type
       const {lat, long} = coordinates;
             fetch(`/api/Attractions?lat=${lat}&long=${long}&type=${type}`)
             .then(response => response.json())
