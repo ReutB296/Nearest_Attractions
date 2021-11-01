@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
  console.log("dbUrl", dbUrl)
 
-mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true, dbName: "attractions"});
 
 
 
