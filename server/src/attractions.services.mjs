@@ -71,13 +71,19 @@ return attr;
 
 export function getAttractions(lat, long, type) {
     if(type === "all"){
-        return Attraction_aggregate(lat, long);
+
+       return Attraction.find();
+        // return Attraction_aggregate(lat, long);
     }else{
-        return Attr_filter_aggregate(lat, long, type);
+        return Attraction.find();
+        // return Attr_filter_aggregate(lat, long, type);
     }
 };
 
 export async function getAttrTypes() {
     return Attraction.aggregate( [ { $group : { _id : "$Attraction_Type" } } ] );
 };
+
+
+
 
