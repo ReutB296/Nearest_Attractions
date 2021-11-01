@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/api/Attractions', AttractionsRouter);
 
-app.use(express.static('../client/nearesattractions/build/'));
+app.use(express.static('../client/build/'));
 
 const port = process.env.PORT || 8080;
 app.listen(port);
