@@ -69,13 +69,18 @@ return attr;
 }
 
 
-export function getAttractions(lat, long, type) {
+export async function getAttractions(lat, long, type) {
+    console.log("kill meeeee")
+    const attr= await Attraction.find();
+    console.log("attr", attr)
+
+       return attr;
     if(type === "all"){
 
-       return Attraction.find();
+        
         // return Attraction_aggregate(lat, long);
     }else{
-        return Attraction.find();
+        
         // return Attr_filter_aggregate(lat, long, type);
     }
 };
