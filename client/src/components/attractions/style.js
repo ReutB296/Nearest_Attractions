@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Map_container = styled.div`
+  width: 55%;
+`;
+
 export const Attractions_container = styled.div`
     height: 100%;
     display: flex;
@@ -11,11 +15,9 @@ export const Attractions_container = styled.div`
     background-color: #f2f2f2;
     padding: 10px;
     min-height: 100vh;
+      
 `;
 
-export const Map_container = styled.div`
-  width: 55%;
-`;
 
 export const Map_div = styled.div`
   width: 100%;
@@ -25,14 +27,16 @@ export const Map_div = styled.div`
 export const MapAndAttr_container = styled.div`
     display: flex;
     flex-direction: row-reverse;
+
+    @media screen and (max-width: 480px){
+      ${Attractions_container}{
+        width: 100%;
+      }
+    
+      ${Map_container}{
+          display: none;
+      }
+    }
   
 `;
 
-
-
-// display: grid;
-// grid-column-gap: 2.5rem;
-// column-gap: 2.5rem;
-// grid-template-columns: repeat(2, minmax(0, 1fr));
-// grid-row-gap: 2.5rem;
-// row-gap: 2.5rem;
