@@ -62,7 +62,7 @@ return (
 
             <Attr_hours_div>
                   <ClockIcon src={clock}/>
-                  <Attr_hours>{Opening_Hours.replace("<br>","").replace("</br>","").replace("</br>","").replace("</br>","")}</Attr_hours>
+                  <Attr_hours>{Opening_Hours.replace("<br>","").replaceAll("</br>","")}</Attr_hours>
             </Attr_hours_div>
            
             <IdAndUrlContainer>
